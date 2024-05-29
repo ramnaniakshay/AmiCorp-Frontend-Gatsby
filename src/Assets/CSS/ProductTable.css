@@ -1,0 +1,57 @@
+/* src/Assets/CSS/ProductTable.css */
+
+.product-table {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+img {
+  max-width: 100px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination span {
+  margin: 0 10px;
+}

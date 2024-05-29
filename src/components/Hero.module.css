@@ -1,0 +1,15 @@
+.epic {
+    background-color: aqua;
+    color: brown;
+}
+.epic:hover{
+    cursor:pointer;
+    background-color: brown;
+    color: aqua;
+}
+.myCustomCSS{
+    font-size: 25px;
+    color: blue;
+}
+
+/* 5 custom css */

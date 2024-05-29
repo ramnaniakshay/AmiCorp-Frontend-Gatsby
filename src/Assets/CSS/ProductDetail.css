@@ -1,0 +1,23 @@
+.product-detail {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-detail h1 {
+    margin-bottom: 20px;
+  }
+  
+  .product-detail p {
+    margin-bottom: 10px;
+  }
+  
+  .product-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
