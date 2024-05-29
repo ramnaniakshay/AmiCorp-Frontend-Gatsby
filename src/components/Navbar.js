@@ -9,7 +9,13 @@ function Navbar() {
     navigate('/login');
   };
 
-  const jwtToken = localStorage.getItem('jwt');
+  let jwtToken;
+  if (typeof window !== "undefined") {
+    jwtToken = localStorage.getItem('jwt');
+    if (!jwtToken) {
+      navigate('/');
+    }
+  }
 
   return (
     <div style={{ textAlign: 'center', fontSize: '20px', backgroundColor: 'yellow', color: 'white', textDecoration: 'none' }}>
