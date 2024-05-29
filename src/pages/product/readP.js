@@ -10,10 +10,12 @@ const FetchProducts = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 2;
-  const jwtToken = localStorage.getItem('jwt');
-
-  if (!jwtToken) {
-    navigate('/');
+  let jwtToken;
+  if (typeof window !== "undefined") {
+    jwtToken = localStorage.getItem('jwt');
+    if (!jwtToken) {
+      navigate('/');
+    }
   }
 
   useEffect(() => {

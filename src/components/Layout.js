@@ -5,14 +5,20 @@ import { navigate } from 'gatsby';
 import axios from 'axios';
 
 function Layout({ children }) {
+  let jwtToken;
+
+  if (typeof window !== "undefined") {
+    jwtToken = localStorage.getItem('jwt');
+    if (!jwtToken) {
+      navigate('/');
+    }
+  }
+
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
     const checkAuthentication = async () => {
-      const jwtToken = localStorage.getItem('jwt');
-      if (!jwtToken) {
-        navigate('/login');
-      } else {
+      if (jwtToken) {
         try {
           const response = await axios.get('http://localhost:1337/api/users/me', {
             headers: {

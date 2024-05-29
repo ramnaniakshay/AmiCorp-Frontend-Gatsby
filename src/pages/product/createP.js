@@ -8,9 +8,12 @@ const CreateProductForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const jwtToken = localStorage.getItem('jwt');
-  if (!jwtToken) {
-    navigate('/')
+  let jwtToken;
+  if (typeof window !== "undefined") {
+    jwtToken = localStorage.getItem('jwt');
+    if (!jwtToken) {
+      navigate('/');
+    }
   }
   const onSubmit = async (data) => {
     try {
